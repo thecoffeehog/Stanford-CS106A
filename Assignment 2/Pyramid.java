@@ -1,7 +1,6 @@
 /*
  * File: Pyramid.java
- * Name: 
- * Section Leader: 
+ *
  * ------------------
  * This file is the starter file for the Pyramid problem.
  * It includes definitions of the constants that match the
@@ -28,27 +27,27 @@ public class Pyramid extends GraphicsProgram {
 	private double h;
 	private double bricksInRow;
 	public void run() {
-	
+
 		for(int row=0;row<BRICKS_IN_BASE;row++)
 		{
 		//Calculates the no. of bricks to be printed in a row
 		bricksInRow=BRICKS_IN_BASE-row;
-		
+
 			for(int numOfBricks=0;numOfBricks<bricksInRow;numOfBricks++)
-			{   
+			{
 				//Formula for calculation of width
 		        w=getWidth()/2+numOfBricks*BRICK_WIDTH-(BRICK_WIDTH * bricksInRow)/2;
-		        				
+
 				//Formula for calculation of height
 				h=getHeight()-BRICK_HEIGHT*(row+1);
-			
-			//Declaring a variable of GRect Class	
+
+			//Declaring a variable of GRect Class
 			 GRect Brick= new GRect(w,h,BRICK_WIDTH,BRICK_HEIGHT);
-			 
-			 //Printing the brick 
+
+			 //Printing the brick
 	         add(Brick);
 	         }
-	
+
 		}
 	}
 }
